@@ -1,0 +1,13 @@
+C:\Users\letic\Documents\IFSP\C#\PI_2\LeBi\LeBi\bin\Debug\LeBi.exe.config
+C:\Users\letic\Documents\IFSP\C#\PI_2\LeBi\LeBi\bin\Debug\LeBi.exe
+C:\Users\letic\Documents\IFSP\C#\PI_2\LeBi\LeBi\bin\Debug\LeBi.pdb
+C:\Users\letic\Documents\IFSP\C#\PI_2\LeBi\LeBi\obj\Debug\LeBi.csprojAssemblyReference.cache
+C:\Users\letic\Documents\IFSP\C#\PI_2\LeBi\LeBi\obj\Debug\LeBi.frmLogin.resources
+C:\Users\letic\Documents\IFSP\C#\PI_2\LeBi\LeBi\obj\Debug\LeBi.Properties.Resources.resources
+C:\Users\letic\Documents\IFSP\C#\PI_2\LeBi\LeBi\obj\Debug\LeBi.csproj.GenerateResource.cache
+C:\Users\letic\Documents\IFSP\C#\PI_2\LeBi\LeBi\obj\Debug\LeBi.csproj.CoreCompileInputs.cache
+C:\Users\letic\Documents\IFSP\C#\PI_2\LeBi\LeBi\obj\Debug\LeBi.exe
+C:\Users\letic\Documents\IFSP\C#\PI_2\LeBi\LeBi\obj\Debug\LeBi.pdb
+C:\Users\letic\Documents\IFSP\C#\PI_2\LeBi\LeBi\obj\Debug\LeBi.CadastroPaciente.resources
+C:\Users\letic\Documents\IFSP\C#\PI_2\LeBi\LeBi\obj\Debug\LeBi.EscolhaMedico.resources
+C:\Users\letic\Documents\IFSP\C#\PI_2\LeBi\LeBi\obj\Debug\LeBi.FiltroEspecialidade.resources
