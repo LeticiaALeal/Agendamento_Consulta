@@ -17,20 +17,28 @@ CREATE  TABLE Medicos (
     nome VARCHAR (100),
     especialidade VARCHAR (100),
     CRM VARCHAR (10)
+    
  );   
-
-/*CREATE TABLE Especialidade (
-	idEspecialidade INT (2) 
-
-
-); */
-
-CREATE TABLE Consultas (
-	idMedico INT,
+ 
+CREATE TABLE Agenda (
+	idAgenda INT AUTO_INCREMENT, 
+    idMedico INT,
 	idPaciente INT, 
-	dataConsulta DATE,
-	hora TIME, 
+	idConsulta INT,
     
 	FOREIGN KEY (idMedico) REFERENCES Medicos (idMedico) on update cascade,
-	FOREIGN KEY (idPaciente) REFERENCES Pacientes (idPaciente) on update cascade    
+	FOREIGN KEY (idPaciente) REFERENCES Pacientes (idPaciente) on update cascade,   
+    FOREIGN KEY (idAgenda) REFERENCES ConsultasMarcadas(idConsulta)
 );
+
+CREATE TABLE ConsultasMarcadas (
+	idConsulta INT AUTO_INCREMENT,	
+    dataConsulta DATE,
+	horaConsulta TIME, 
+
+	FOREIGN KEY (idConsulta) REFERENCES Agenda(idAgenda) on update cascade
+); 
+
+ 
+
+
