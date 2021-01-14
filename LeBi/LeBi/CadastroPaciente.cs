@@ -16,5 +16,10 @@ namespace LeBi
         {
             InitializeComponent();
         }
+
+        private void btCadastrar_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
