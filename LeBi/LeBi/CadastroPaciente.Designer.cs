@@ -33,10 +33,7 @@ namespace LeBi
             this.label2 = new System.Windows.Forms.Label();
             this.txNome = new System.Windows.Forms.TextBox();
             this.txEmail = new System.Windows.Forms.TextBox();
-            this.txCpf = new System.Windows.Forms.TextBox();
-            this.txTelefone = new System.Windows.Forms.TextBox();
             this.txEndereco = new System.Windows.Forms.TextBox();
-            this.txDataNascimento = new System.Windows.Forms.TextBox();
             this.txSenha = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -46,18 +43,22 @@ namespace LeBi
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.btCadastrar = new System.Windows.Forms.Button();
+            this.maskTel = new System.Windows.Forms.MaskedTextBox();
+            this.maskCPF = new System.Windows.Forms.MaskedTextBox();
+            this.maskNasc = new System.Windows.Forms.MaskedTextBox();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Georgia", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(244, 22);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(115, 29);
+            this.label1.Size = new System.Drawing.Size(125, 32);
             this.label1.TabIndex = 0;
             this.label1.Text = "Cadastro";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
             // 
@@ -72,60 +73,43 @@ namespace LeBi
             // 
             // txNome
             // 
+            this.txNome.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txNome.Location = new System.Drawing.Point(185, 119);
             this.txNome.Margin = new System.Windows.Forms.Padding(4);
             this.txNome.Name = "txNome";
-            this.txNome.Size = new System.Drawing.Size(332, 22);
+            this.txNome.Size = new System.Drawing.Size(332, 28);
             this.txNome.TabIndex = 2;
             // 
             // txEmail
             // 
+            this.txEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txEmail.Location = new System.Drawing.Point(185, 162);
             this.txEmail.Margin = new System.Windows.Forms.Padding(4);
             this.txEmail.Name = "txEmail";
-            this.txEmail.Size = new System.Drawing.Size(332, 22);
+            this.txEmail.Size = new System.Drawing.Size(332, 28);
             this.txEmail.TabIndex = 3;
-            // 
-            // txCpf
-            // 
-            this.txCpf.Location = new System.Drawing.Point(185, 209);
-            this.txCpf.Margin = new System.Windows.Forms.Padding(4);
-            this.txCpf.Name = "txCpf";
-            this.txCpf.Size = new System.Drawing.Size(199, 22);
-            this.txCpf.TabIndex = 4;
-            // 
-            // txTelefone
-            // 
-            this.txTelefone.Location = new System.Drawing.Point(185, 252);
-            this.txTelefone.Margin = new System.Windows.Forms.Padding(4);
-            this.txTelefone.Name = "txTelefone";
-            this.txTelefone.Size = new System.Drawing.Size(199, 22);
-            this.txTelefone.TabIndex = 5;
             // 
             // txEndereco
             // 
+            this.txEndereco.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txEndereco.Location = new System.Drawing.Point(185, 294);
             this.txEndereco.Margin = new System.Windows.Forms.Padding(4);
             this.txEndereco.Multiline = true;
             this.txEndereco.Name = "txEndereco";
             this.txEndereco.Size = new System.Drawing.Size(332, 48);
             this.txEndereco.TabIndex = 6;
-            // 
-            // txDataNascimento
-            // 
-            this.txDataNascimento.Location = new System.Drawing.Point(185, 362);
-            this.txDataNascimento.Margin = new System.Windows.Forms.Padding(4);
-            this.txDataNascimento.Name = "txDataNascimento";
-            this.txDataNascimento.Size = new System.Drawing.Size(132, 22);
-            this.txDataNascimento.TabIndex = 7;
+            this.txEndereco.TextChanged += new System.EventHandler(this.txEndereco_TextChanged);
             // 
             // txSenha
             // 
+            this.txSenha.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txSenha.Location = new System.Drawing.Point(185, 406);
             this.txSenha.Margin = new System.Windows.Forms.Padding(4);
             this.txSenha.Name = "txSenha";
-            this.txSenha.Size = new System.Drawing.Size(199, 22);
+            this.txSenha.PasswordChar = '*';
+            this.txSenha.Size = new System.Drawing.Size(199, 28);
             this.txSenha.TabIndex = 8;
+            this.txSenha.TextChanged += new System.EventHandler(this.txSenha_TextChanged);
             // 
             // label3
             // 
@@ -209,12 +193,45 @@ namespace LeBi
             this.btCadastrar.UseVisualStyleBackColor = true;
             this.btCadastrar.Click += new System.EventHandler(this.btCadastrar_Click);
             // 
+            // maskTel
+            // 
+            this.maskTel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.maskTel.Location = new System.Drawing.Point(184, 257);
+            this.maskTel.Mask = "(99) 00000-0000";
+            this.maskTel.Name = "maskTel";
+            this.maskTel.Size = new System.Drawing.Size(200, 28);
+            this.maskTel.TabIndex = 17;
+            this.maskTel.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.maskedTextBox1_MaskInputRejected);
+            // 
+            // maskCPF
+            // 
+            this.maskCPF.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.maskCPF.Location = new System.Drawing.Point(184, 209);
+            this.maskCPF.Mask = "999.999.999-99";
+            this.maskCPF.Name = "maskCPF";
+            this.maskCPF.Size = new System.Drawing.Size(200, 28);
+            this.maskCPF.TabIndex = 18;
+            // 
+            // maskNasc
+            // 
+            this.maskNasc.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.maskNasc.Location = new System.Drawing.Point(184, 362);
+            this.maskNasc.Mask = "00/00/0000";
+            this.maskNasc.Name = "maskNasc";
+            this.maskNasc.Size = new System.Drawing.Size(200, 28);
+            this.maskNasc.TabIndex = 19;
+            this.maskNasc.ValidatingType = typeof(System.DateTime);
+            this.maskNasc.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.maskNasc_MaskInputRejected);
+            // 
             // CadastroPaciente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(603, 527);
+            this.Controls.Add(this.maskNasc);
+            this.Controls.Add(this.maskCPF);
+            this.Controls.Add(this.maskTel);
             this.Controls.Add(this.btCadastrar);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
@@ -224,10 +241,7 @@ namespace LeBi
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.txSenha);
-            this.Controls.Add(this.txDataNascimento);
             this.Controls.Add(this.txEndereco);
-            this.Controls.Add(this.txTelefone);
-            this.Controls.Add(this.txCpf);
             this.Controls.Add(this.txEmail);
             this.Controls.Add(this.txNome);
             this.Controls.Add(this.label2);
@@ -235,6 +249,7 @@ namespace LeBi
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "CadastroPaciente";
             this.Text = "CadastroPaciente";
+            this.Load += new System.EventHandler(this.CadastroPaciente_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -246,10 +261,7 @@ namespace LeBi
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txNome;
         private System.Windows.Forms.TextBox txEmail;
-        private System.Windows.Forms.TextBox txCpf;
-        private System.Windows.Forms.TextBox txTelefone;
         private System.Windows.Forms.TextBox txEndereco;
-        private System.Windows.Forms.TextBox txDataNascimento;
         private System.Windows.Forms.TextBox txSenha;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
@@ -259,5 +271,8 @@ namespace LeBi
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Button btCadastrar;
+        private System.Windows.Forms.MaskedTextBox maskTel;
+        private System.Windows.Forms.MaskedTextBox maskCPF;
+        private System.Windows.Forms.MaskedTextBox maskNasc;
     }
 }

@@ -21,5 +21,40 @@ namespace LeBi
         {
 
         }
+
+        private void maskedTextBox1_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
+        {
+
+        }
+
+        private void txCpf_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void CadastroPaciente_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void maskNasc_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
+        {
+
+        }
+
+        private void txEndereco_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txSenha_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

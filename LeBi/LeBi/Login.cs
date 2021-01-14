@@ -16,5 +16,10 @@ namespace LeBi
         {
             InitializeComponent();
         }
+
+        private void lkCadastroLogin_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+
+        }
     }
 }
