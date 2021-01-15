@@ -19,7 +19,18 @@ namespace LeBi
 
         private void lkCadastroLogin_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
+            
+        }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            CadastroPaciente cadastro = new CadastroPaciente();
+            cadastro.Show();
         }
     }
 }

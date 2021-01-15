@@ -34,8 +34,9 @@ namespace LeBi
             this.txEmail = new System.Windows.Forms.TextBox();
             this.txSenha = new System.Windows.Forms.TextBox();
             this.btLogin = new System.Windows.Forms.Button();
-            this.lkCadastroLogin = new System.Windows.Forms.LinkLabel();
             this.label2 = new System.Windows.Forms.Label();
+            this.btnSair = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // tituloLogin
@@ -63,7 +64,7 @@ namespace LeBi
             // txEmail
             // 
             this.txEmail.Location = new System.Drawing.Point(132, 149);
-            this.txEmail.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txEmail.Margin = new System.Windows.Forms.Padding(4);
             this.txEmail.Multiline = true;
             this.txEmail.Name = "txEmail";
             this.txEmail.Size = new System.Drawing.Size(199, 30);
@@ -73,7 +74,7 @@ namespace LeBi
             // txSenha
             // 
             this.txSenha.Location = new System.Drawing.Point(132, 203);
-            this.txSenha.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txSenha.Margin = new System.Windows.Forms.Padding(4);
             this.txSenha.Multiline = true;
             this.txSenha.Name = "txSenha";
             this.txSenha.Size = new System.Drawing.Size(199, 30);
@@ -82,49 +83,61 @@ namespace LeBi
             // 
             // btLogin
             // 
-            this.btLogin.Location = new System.Drawing.Point(132, 270);
-            this.btLogin.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btLogin.Location = new System.Drawing.Point(13, 270);
+            this.btLogin.Margin = new System.Windows.Forms.Padding(4);
             this.btLogin.Name = "btLogin";
             this.btLogin.Size = new System.Drawing.Size(200, 31);
             this.btLogin.TabIndex = 4;
             this.btLogin.Text = "Entrar";
             this.btLogin.UseVisualStyleBackColor = true;
             // 
-            // lkCadastroLogin
-            // 
-            this.lkCadastroLogin.AutoSize = true;
-            this.lkCadastroLogin.Location = new System.Drawing.Point(265, 324);
-            this.lkCadastroLogin.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lkCadastroLogin.Name = "lkCadastroLogin";
-            this.lkCadastroLogin.Size = new System.Drawing.Size(64, 17);
-            this.lkCadastroLogin.TabIndex = 5;
-            this.lkCadastroLogin.TabStop = true;
-            this.lkCadastroLogin.Text = "inscreva!";
-            this.lkCadastroLogin.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lkCadastroLogin_LinkClicked);
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(141, 324);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(114, 362);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(126, 17);
+            this.label2.Size = new System.Drawing.Size(240, 20);
             this.label2.TabIndex = 6;
-            this.label2.Text = "Novo por aqui? Se";
+            this.label2.Text = "Novo(a) por aqui? Se inscreva!";
+            // 
+            // btnSair
+            // 
+            this.btnSair.Location = new System.Drawing.Point(240, 270);
+            this.btnSair.Margin = new System.Windows.Forms.Padding(4);
+            this.btnSair.Name = "btnSair";
+            this.btnSair.Size = new System.Drawing.Size(200, 31);
+            this.btnSair.TabIndex = 7;
+            this.btnSair.Text = "Sair";
+            this.btnSair.UseVisualStyleBackColor = true;
+            this.btnSair.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(132, 395);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(200, 31);
+            this.button1.TabIndex = 8;
+            this.button1.Text = "Cadastrar";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // frmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(453, 427);
+            this.ClientSize = new System.Drawing.Size(461, 450);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnSair);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.lkCadastroLogin);
             this.Controls.Add(this.btLogin);
             this.Controls.Add(this.txSenha);
             this.Controls.Add(this.txEmail);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.tituloLogin);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmLogin";
             this.Text = "Login LeBi";
             this.ResumeLayout(false);
@@ -139,8 +152,9 @@ namespace LeBi
         private System.Windows.Forms.TextBox txEmail;
         private System.Windows.Forms.TextBox txSenha;
         private System.Windows.Forms.Button btLogin;
-        private System.Windows.Forms.LinkLabel lkCadastroLogin;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button btnSair;
+        private System.Windows.Forms.Button button1;
     }
 }
 
