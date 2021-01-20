@@ -1,14 +1,19 @@
 CREATE DATABASE lebi;
 USE lebi;
 
+select * from pacientes;
+-- TRUNCATE TABLE Pacientes;
+
+
 CREATE TABLE Pacientes (
 	id INT AUTO_INCREMENT PRIMARY KEY,
-    nome VARCHAR(100),
-	email VARCHAR(100),
-	cpf VARCHAR(14),
-    telefone VARCHAR (12),
+    nome VARCHAR(100) NOT NULL,
+	email VARCHAR(100) NOT NULL,
+	cpf VARCHAR(14) NOT NULL,
+    telefone VARCHAR (14) NOT NULL,
     endereco VARCHAR (100),
-    dataNascimento DATE
+    dataNascimento DATE,
+    senha VARCHAR (100) NOT NULL
 );
 
 CREATE  TABLE Medicos (
@@ -25,12 +30,3 @@ CREATE TABLE Agenda (
 	dia varchar(20)
 );
 
-CREATE TABLE agenda_medico (
-	id INT AUTO_INCREMENT PRIMARY KEY,
-	idMedico INT,
-	idAgenda INT,
-	
-	FOREIGN KEY (idMedico) REFERENCES Medicos(id),
-	FOREIGN KEY (idAgenda) REFERENCES Agenda(id)
-	
-);

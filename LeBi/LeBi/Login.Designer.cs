@@ -33,10 +33,10 @@ namespace LeBi
             this.label1 = new System.Windows.Forms.Label();
             this.txEmail = new System.Windows.Forms.TextBox();
             this.txSenha = new System.Windows.Forms.TextBox();
-            this.btLogin = new System.Windows.Forms.Button();
+            this.btnEntrar = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.btnSair = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnCadastrar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // tituloLogin
@@ -77,19 +77,20 @@ namespace LeBi
             this.txSenha.Margin = new System.Windows.Forms.Padding(4);
             this.txSenha.Multiline = true;
             this.txSenha.Name = "txSenha";
+            this.txSenha.PasswordChar = '*';
             this.txSenha.Size = new System.Drawing.Size(199, 30);
             this.txSenha.TabIndex = 3;
-            this.txSenha.Text = "Senha";
             // 
-            // btLogin
+            // btnEntrar
             // 
-            this.btLogin.Location = new System.Drawing.Point(13, 270);
-            this.btLogin.Margin = new System.Windows.Forms.Padding(4);
-            this.btLogin.Name = "btLogin";
-            this.btLogin.Size = new System.Drawing.Size(200, 31);
-            this.btLogin.TabIndex = 4;
-            this.btLogin.Text = "Entrar";
-            this.btLogin.UseVisualStyleBackColor = true;
+            this.btnEntrar.Location = new System.Drawing.Point(13, 270);
+            this.btnEntrar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnEntrar.Name = "btnEntrar";
+            this.btnEntrar.Size = new System.Drawing.Size(200, 31);
+            this.btnEntrar.TabIndex = 4;
+            this.btnEntrar.Text = "Entrar";
+            this.btnEntrar.UseVisualStyleBackColor = true;
+            this.btnEntrar.Click += new System.EventHandler(this.btLogin_Click);
             // 
             // label2
             // 
@@ -113,26 +114,26 @@ namespace LeBi
             this.btnSair.UseVisualStyleBackColor = true;
             this.btnSair.Click += new System.EventHandler(this.button1_Click);
             // 
-            // button1
+            // btnCadastrar
             // 
-            this.button1.Location = new System.Drawing.Point(132, 395);
-            this.button1.Margin = new System.Windows.Forms.Padding(4);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(200, 31);
-            this.button1.TabIndex = 8;
-            this.button1.Text = "Cadastrar";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            this.btnCadastrar.Location = new System.Drawing.Point(132, 395);
+            this.btnCadastrar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnCadastrar.Name = "btnCadastrar";
+            this.btnCadastrar.Size = new System.Drawing.Size(200, 31);
+            this.btnCadastrar.TabIndex = 8;
+            this.btnCadastrar.Text = "Cadastrar";
+            this.btnCadastrar.UseVisualStyleBackColor = true;
+            this.btnCadastrar.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // frmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(461, 450);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnCadastrar);
             this.Controls.Add(this.btnSair);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.btLogin);
+            this.Controls.Add(this.btnEntrar);
             this.Controls.Add(this.txSenha);
             this.Controls.Add(this.txEmail);
             this.Controls.Add(this.label1);
@@ -151,10 +152,10 @@ namespace LeBi
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txEmail;
         private System.Windows.Forms.TextBox txSenha;
-        private System.Windows.Forms.Button btLogin;
+        private System.Windows.Forms.Button btnEntrar;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnSair;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnCadastrar;
     }
 }
 

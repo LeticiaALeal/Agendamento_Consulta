@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MySql.Data.MySqlClient;
 
 namespace LeBi
 {
@@ -30,7 +31,49 @@ namespace LeBi
         private void button1_Click_1(object sender, EventArgs e)
         {
             CadastroPaciente cadastro = new CadastroPaciente();
-            cadastro.Show();
+            cadastro.ShowDialog();
+           //cadastro.Show();
+        }
+
+
+        //string de conexão:
+        string strconn = "server=localhost;port=3306; UID=root; pwd=1234; database=lebi;";
+
+        private void btLogin_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                MySqlConnection conn = new MySqlConnection(strconn);
+                conn.Open();
+
+                MySqlCommand cmd = new MySqlCommand("select * from Pacientes where email = '" + txEmail.Text + "'", conn);
+                MySqlDataReader reader = cmd.ExecuteReader(); // vai armazenar na variável reader tudo o que o comando pegar no txEmail.
+
+                while (reader.Read())
+                {
+                    if (txEmail.Text == reader.GetString("email"))
+                    {
+                        if (txSenha.Text == reader.GetString("senha"))
+                        {
+                            MessageBox.Show("Bem-vindo(a)!");
+
+                        }
+                        else
+                        {
+                            MessageBox.Show("Algo está incorreto. Verifique se senha e e-mail estão corretos!");
+                        }
+                    }
+                }
+
+                conn.Close();
+
+
+            }
+            catch (Exception err)
+            {
+                MessageBox.Show(err.Message);
+            }
+
         }
     }
 }
