@@ -32,12 +32,14 @@ namespace LeBi
         {
             CadastroPaciente cadastro = new CadastroPaciente();
             cadastro.ShowDialog();
-           //cadastro.Show();
+            Hide();
         }
 
 
         //string de conexão:
-        string strconn = "server=localhost;port=3306; UID=root; pwd=1234; database=lebi;";
+        /* Conexão Bianca
+         string strconn = "server=localhost;port=3306; UID=root; pwd=1234; database=lebi;";*/
+        string strconn = "server=localhost;port=3306; UID=root; pwd=Leh2019; database=lebi;";
 
         private void btLogin_Click(object sender, EventArgs e)
         {
@@ -55,8 +57,9 @@ namespace LeBi
                     {
                         if (txSenha.Text == reader.GetString("senha"))
                         {
-                            MessageBox.Show("Bem-vindo(a)!");
-
+                            FiltroEspecialidade home = new FiltroEspecialidade();
+                            home.Show();
+                            Hide();
                         }
                         else
                         {

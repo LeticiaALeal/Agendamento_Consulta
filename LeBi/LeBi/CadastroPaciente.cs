@@ -19,7 +19,11 @@ namespace LeBi
         }
 
         //string de conexão:
+        /* Conexão Bianca
         string strconn = "server=localhost;port=3306; UID=root; pwd=1234; database=lebi;";
+        */
+
+        string strconn = "server=localhost;port=3306; UID=root; pwd=Leh2019; database=lebi;";
 
         private void btCadastrar_Click(object sender, EventArgs e)
         {
@@ -45,9 +49,17 @@ namespace LeBi
                 cmd.Parameters.AddWithValue("@dataNascimento", DateTime.Parse(maskNasc.Text));
                 cmd.Parameters.Add("@senha", MySqlDbType.String).Value = txSenha.Text;
                 cmd.ExecuteNonQuery(); //vai adicionar, remover ou add dados da tabela.
-                
+
+                txNome.Clear();
+                txEmail.Clear();
+                maskCPF.Clear();
+                maskTel.Clear();
+                txEndereco.Clear();
+                maskNasc.Clear();
+                txSenha.Clear();
 
                 conn.Close();
+             
             }
             catch (Exception err)
             {
