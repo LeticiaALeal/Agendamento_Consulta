@@ -40,7 +40,6 @@ namespace LeBi
             MySqlConnection conn = new MySqlConnection(strconn);
             conn.Open();
 
-
             MySqlCommand cmd = new MySqlCommand("select * from medicos where especialidade = '" + cbEspecialidade.SelectedItem.ToString() + "'", conn);
             MySqlDataReader reader = cmd.ExecuteReader();
             
@@ -49,7 +48,8 @@ namespace LeBi
             {
                 if (cbEspecialidade.SelectedItem.ToString() == reader.GetString("especialidade"))
                 {
-                    EscolhaMedico medicos = new EscolhaMedico();
+                    string espec = cbEspecialidade.SelectedItem.ToString();
+                    EscolhaMedico medicos = new EscolhaMedico(espec);
                     medicos.Show();
                     Hide();
                 }
@@ -75,7 +75,8 @@ namespace LeBi
             {
                 if (txNomeMedico.Text == reader.GetString("nome"))
                 {
-                    EscolhaMedico medicos = new EscolhaMedico();
+                    string espec = cbEspecialidade.SelectedItem.ToString();
+                    EscolhaMedico medicos = new EscolhaMedico(espec);
                     medicos.Show();
                     Hide();
                 }               
