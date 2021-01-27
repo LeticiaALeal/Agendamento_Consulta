@@ -24,9 +24,10 @@ namespace LeBi
             InitializeComponent();         
         }
 
+        string strconn = "server=localhost;port=3306; UID=root; pwd=Leh2019; database=lebi;";
+
         private void EscolhaMedico_Load(object sender, EventArgs e)
-        {
-            string strconn = "server=localhost;port=3306; UID=root; pwd=Leh2019; database=lebi;";
+        {          
             MySqlConnection conn = new MySqlConnection(strconn);
 
             try
@@ -43,6 +44,46 @@ namespace LeBi
             catch (Exception error)
             {
                 MessageBox.Show(error.Message);
+            }
+
+        }
+
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+ 
+            txMedico.Text = dataGridView1.CurrentRow.Cells[0].Value.ToString();
+            txHorario.Text = dataGridView1.CurrentRow.Cells[1].Value.ToString();
+            txDia.Text = dataGridView1.CurrentRow.Cells[2].Value.ToString();
+                     
+        }
+
+        private void brAgendar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                MySqlConnection conn = new MySqlConnection(strconn);
+                conn.Open();
+
+                MySqlCommand cmd = new MySqlCommand("insert into consulta_paciente (cpfPaciente, medico, horario, dia) values (@cpfPaciente, @medico, @horario, @dia)", conn);
+
+                cmd.Parameters.Add("@medico", MySqlDbType.String).Value = txMedico.Text;
+                cmd.Parameters.Add("@horario", MySqlDbType.String).Value = txHorario.Text;
+                cmd.Parameters.Add("@dia", MySqlDbType.String).Value = txDia.Text;
+                cmd.Parameters.Add("@cpfPaciente", MySqlDbType.String).Value = txCpf.Text;
+
+                cmd.ExecuteNonQuery();
+
+                string paciente = txCpf.Text;
+                ConsultaPaciente consultas = new ConsultaPaciente(paciente);
+                consultas.Show();
+                Hide();
+
+                conn.Close();
+            }
+
+            catch (Exception err)
+            {
+                MessageBox.Show(err.Message);
             }
 
         }

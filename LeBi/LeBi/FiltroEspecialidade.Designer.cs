@@ -30,11 +30,10 @@ namespace LeBi
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.txNomeMedico = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.btBusca = new System.Windows.Forms.Button();
             this.btConsultas = new System.Windows.Forms.Button();
             this.cbEspecialidade = new System.Windows.Forms.ComboBox();
+            this.txCPF = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label1
@@ -47,16 +46,6 @@ namespace LeBi
             this.label1.TabIndex = 0;
             this.label1.Text = "Filtro de especialidade";
             // 
-            // txNomeMedico
-            // 
-            this.txNomeMedico.Location = new System.Drawing.Point(52, 139);
-            this.txNomeMedico.Multiline = true;
-            this.txNomeMedico.Name = "txNomeMedico";
-            this.txNomeMedico.Size = new System.Drawing.Size(150, 21);
-            this.txNomeMedico.TabIndex = 3;
-            this.txNomeMedico.Text = "Especialidade";
-            this.txNomeMedico.TextChanged += new System.EventHandler(this.txNomeMedico_TextChanged);
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -67,21 +56,10 @@ namespace LeBi
             this.label2.TabIndex = 4;
             this.label2.Text = "Busque pelo especialista ou pela especialidade desejada";
             // 
-            // btBusca
-            // 
-            this.btBusca.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btBusca.Location = new System.Drawing.Point(338, 136);
-            this.btBusca.Name = "btBusca";
-            this.btBusca.Size = new System.Drawing.Size(80, 25);
-            this.btBusca.TabIndex = 5;
-            this.btBusca.Text = "Buscar";
-            this.btBusca.UseVisualStyleBackColor = true;
-            this.btBusca.Click += new System.EventHandler(this.btBusca_Click);
-            // 
             // btConsultas
             // 
             this.btConsultas.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btConsultas.Location = new System.Drawing.Point(266, 218);
+            this.btConsultas.Location = new System.Drawing.Point(238, 218);
             this.btConsultas.Name = "btConsultas";
             this.btConsultas.Size = new System.Drawing.Size(152, 31);
             this.btConsultas.TabIndex = 6;
@@ -106,27 +84,33 @@ namespace LeBi
             "otorrinolaringologia",
             "pediatria",
             "pneumologia"});
-            this.cbEspecialidade.Location = new System.Drawing.Point(214, 140);
+            this.cbEspecialidade.Location = new System.Drawing.Point(144, 137);
             this.cbEspecialidade.Margin = new System.Windows.Forms.Padding(2);
             this.cbEspecialidade.Name = "cbEspecialidade";
-            this.cbEspecialidade.Size = new System.Drawing.Size(120, 21);
+            this.cbEspecialidade.Size = new System.Drawing.Size(164, 21);
             this.cbEspecialidade.TabIndex = 7;
             this.cbEspecialidade.SelectedIndexChanged += new System.EventHandler(this.cbEspecialidade_SelectedIndexChanged);
+            // 
+            // txCPF
+            // 
+            this.txCPF.Location = new System.Drawing.Point(86, 224);
+            this.txCPF.Name = "txCPF";
+            this.txCPF.Size = new System.Drawing.Size(135, 20);
+            this.txCPF.TabIndex = 8;
+            this.txCPF.Text = "Seu CPF";
             // 
             // FiltroEspecialidade
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(479, 284);
+            this.ClientSize = new System.Drawing.Size(464, 284);
+            this.Controls.Add(this.txCPF);
             this.Controls.Add(this.cbEspecialidade);
             this.Controls.Add(this.btConsultas);
-            this.Controls.Add(this.btBusca);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.txNomeMedico);
             this.Controls.Add(this.label1);
             this.Name = "FiltroEspecialidade";
             this.Text = "FiltroEspecialidade";
-            this.Load += new System.EventHandler(this.FiltroEspecialidade_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -135,10 +119,9 @@ namespace LeBi
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txNomeMedico;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button btBusca;
         private System.Windows.Forms.Button btConsultas;
         private System.Windows.Forms.ComboBox cbEspecialidade;
+        private System.Windows.Forms.TextBox txCPF;
     }
 }

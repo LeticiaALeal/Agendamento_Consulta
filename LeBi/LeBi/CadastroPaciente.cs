@@ -45,7 +45,6 @@ namespace LeBi
                 cmd.Parameters.Add("@cpf", MySqlDbType.String).Value = maskCPF.Text;
                 cmd.Parameters.Add("@telefone", MySqlDbType.String).Value = maskTel.Text;
                 cmd.Parameters.Add("@endereco", MySqlDbType.String).Value = txEndereco.Text;
-                //cmd.Parameters.Add("@dataNascimento", MySqlDbType.Date).Value = maskNasc.Text;
                 cmd.Parameters.AddWithValue("@dataNascimento", DateTime.Parse(maskNasc.Text));
                 cmd.Parameters.Add("@senha", MySqlDbType.String).Value = txSenha.Text;
                 cmd.ExecuteNonQuery(); //vai adicionar, remover ou add dados da tabela.
@@ -57,7 +56,7 @@ namespace LeBi
                 txEndereco.Clear();
                 maskNasc.Clear();
                 txSenha.Clear();
-
+             
                 conn.Close();
              
             }
@@ -66,41 +65,7 @@ namespace LeBi
                 MessageBox.Show(err.Message);
             }
 
-        }
+        }    
 
-        private void maskedTextBox1_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
-        {
-
-        }
-
-        private void txCpf_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void CadastroPaciente_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void maskNasc_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
-        {
-
-        }
-
-        private void txEndereco_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txSenha_TextChanged(object sender, EventArgs e)
-        {
-
-        }
     }
 }

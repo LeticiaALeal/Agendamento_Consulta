@@ -74,3 +74,4 @@ C:\Users\letic\Documents\IFSP\C#\PI_2\LeBi\LeBi\bin\Debug\System.Memory.xml
 C:\Users\letic\Documents\IFSP\C#\PI_2\LeBi\LeBi\bin\Debug\System.Numerics.Vectors.xml
 C:\Users\letic\Documents\IFSP\C#\PI_2\LeBi\LeBi\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
 C:\Users\letic\Documents\IFSP\C#\PI_2\LeBi\LeBi\obj\Debug\LeBi.csproj.CopyComplete
+C:\Users\letic\Documents\IFSP\C#\PI_2\LeBi\LeBi\obj\Debug\LeBi.ConsultaPaciente.resources

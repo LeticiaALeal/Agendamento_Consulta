@@ -30,3 +30,19 @@ CREATE TABLE Agenda (
 	dia varchar(20)
 );
 
+CREATE TABLE Agenda_Medico (
+	id INT AUTO_INCREMENT PRIMARY KEY,
+	idMedico INT,
+	idAgenda INT,
+	
+	FOREIGN KEY (idMedico) REFERENCES Medicos(id),
+	FOREIGN KEY (idAgenda) REFERENCES Agenda(id)	
+);
+
+CREATE TABLE consulta_paciente (
+	cpfPaciente varchar(14),
+	medico varchar (100),
+	horario time,
+	dia varchar (20)
+);
+
