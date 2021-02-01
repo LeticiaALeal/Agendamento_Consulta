@@ -27,7 +27,6 @@ namespace LeBi
         {
             CadastroPaciente cadastro = new CadastroPaciente();
             cadastro.ShowDialog();
-            Hide();
         }
 
 

@@ -32,7 +32,7 @@ namespace LeBi
 
             try
             {
-                string cmd = "select m.nome, a.horario, a.dia from medicos m, agenda a, agenda_medico c where c.idMedico = m.id and c.idAgenda = a.id and m.especialidade = '" + especialidade + "'";
+                string cmd = "select m.nome as 'Médico', a.horario as 'Horário', a.dia as 'Dia' from medicos m, agenda a, agenda_medico c where c.idMedico = m.id and c.idAgenda = a.id and m.especialidade = '" + especialidade + "'";
                 daAgenda = new MySqlDataAdapter(cmd, conn);
                 MySqlCommandBuilder cb = new MySqlCommandBuilder(daAgenda);
 
@@ -50,7 +50,6 @@ namespace LeBi
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
- 
             txMedico.Text = dataGridView1.CurrentRow.Cells[0].Value.ToString();
             txHorario.Text = dataGridView1.CurrentRow.Cells[1].Value.ToString();
             txDia.Text = dataGridView1.CurrentRow.Cells[2].Value.ToString();
@@ -86,6 +85,13 @@ namespace LeBi
                 MessageBox.Show(err.Message);
             }
 
+        }
+
+        private void btVoltar_Click(object sender, EventArgs e)
+        {
+            FiltroEspecialidade filtro = new FiltroEspecialidade();
+            filtro.Show();
+            Hide();
         }
     }
 }

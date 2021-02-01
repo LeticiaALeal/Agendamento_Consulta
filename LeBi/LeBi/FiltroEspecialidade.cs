@@ -76,5 +76,11 @@ namespace LeBi
 
         }
 
+        private void btLogout_Click(object sender, EventArgs e)
+        {
+            frmLogin login = new frmLogin();
+            login.Show();
+            Hide();
+        }
     }
 }

@@ -31,7 +31,7 @@ namespace LeBi
             MySqlConnection conn = new MySqlConnection(strconn);
             try
             {
-                string cmd = "select * from consulta_paciente where cpfPaciente = '" + paciente + "'";
+                string cmd = "select id as 'Código', medico as 'Médico', horario as 'Horário', dia as 'Dia' from consulta_paciente where cpfPaciente = '" + paciente + "'";
                 daConsulta = new MySqlDataAdapter(cmd, conn);
                 MySqlCommandBuilder cb = new MySqlCommandBuilder(daConsulta);
 
@@ -43,6 +43,37 @@ namespace LeBi
             catch (Exception error)
             {
                 MessageBox.Show(error.Message);
+            }
+        }
+
+        private void btVoltar_Click(object sender, EventArgs e)
+        {
+                FiltroEspecialidade filtro = new FiltroEspecialidade();
+                filtro.Show();
+                Hide();
+        }
+
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            string id = dataGridView1.CurrentRow.Cells[0].Value.ToString();
+
+            try
+            {
+                MySqlConnection conn = new MySqlConnection(strconn);
+                conn.Open();
+
+                MySqlCommand cmd = new MySqlCommand("delete from consulta_paciente where id =" + id, conn);
+
+                cmd.Parameters.AddWithValue("id", id);
+                cmd.ExecuteNonQuery();
+                conn.Close();
+
+                dataGridView1.Rows.Remove(dataGridView1.CurrentRow);
+
+            }
+            catch (Exception err)
+            {
+                MessageBox.Show(err.Message);
             }
         }
     }

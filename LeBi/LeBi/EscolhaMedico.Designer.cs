@@ -41,12 +41,13 @@ namespace LeBi
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.btVoltar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // brAgendar
             // 
-            this.brAgendar.Location = new System.Drawing.Point(634, 243);
+            this.brAgendar.Location = new System.Drawing.Point(692, 237);
             this.brAgendar.Name = "brAgendar";
             this.brAgendar.Size = new System.Drawing.Size(75, 23);
             this.brAgendar.TabIndex = 3;
@@ -136,11 +137,22 @@ namespace LeBi
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
+            // btVoltar
+            // 
+            this.btVoltar.Location = new System.Drawing.Point(600, 237);
+            this.btVoltar.Name = "btVoltar";
+            this.btVoltar.Size = new System.Drawing.Size(75, 23);
+            this.btVoltar.TabIndex = 18;
+            this.btVoltar.Text = "Voltar";
+            this.btVoltar.UseVisualStyleBackColor = true;
+            this.btVoltar.Click += new System.EventHandler(this.btVoltar_Click);
+            // 
             // EscolhaMedico
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(814, 344);
+            this.Controls.Add(this.btVoltar);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -172,5 +184,6 @@ namespace LeBi
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.Button btVoltar;
     }
 }

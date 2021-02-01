@@ -40,6 +40,7 @@ CREATE TABLE Agenda_Medico (
 );
 
 CREATE TABLE consulta_paciente (
+	id INT AUTO_INCREMENT PRIMARY KEY,
 	cpfPaciente varchar(14),
 	medico varchar (100),
 	horario time,

@@ -58,7 +58,10 @@ namespace LeBi
                 txSenha.Clear();
              
                 conn.Close();
-             
+                MessageBox.Show("Usuário cadastrado com sucesso");
+                Hide();
+                
+
             }
             catch (Exception err)
             {
