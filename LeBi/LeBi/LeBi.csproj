@@ -122,6 +122,7 @@
     <Compile Include="Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
+    <Compile Include="PessoaLogada.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="CadastroPaciente.resx">
@@ -147,6 +148,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -161,6 +163,27 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\589394662ba164058d2ac84b4a0643b2-medical-record-table-notes-by-vexels.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ca8da749a7154adcc93885d34aec125c-enfermeira-feminina-by-vexels.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\9610.png_860.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\7cef7ae6c2c163d445297eeb7fa6118f-mulher-arquivo-m-eacute-dico-by-vexels.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\99e164014aff86b7b848821b532ddb02-pasta-de-hist-oacute-rico-de-registro-de-arquivos-m-eacute-dicos-by-vexels.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1e8c01182d73aa41192422c6f7770a59-calend-aacute-rio-m-eacute-dico-by-vexels.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1e8c01182d73aa41192422c6f7770a59-calend-aacute-rio-m-eacute-dico-by-vexels1.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

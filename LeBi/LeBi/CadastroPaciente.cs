@@ -19,11 +19,11 @@ namespace LeBi
         }
 
         //string de conexão:
-        /* Conexão Bianca
+       //  Conexão Bianca
         string strconn = "server=localhost;port=3306; UID=root; pwd=1234; database=lebi;";
-        */
+        
 
-        string strconn = "server=localhost;port=3306; UID=root; pwd=Leh2019; database=lebi;";
+        // string strconn = "server=localhost;port=3306; UID=root; pwd=Leh2019; database=lebi;";
 
         private void btCadastrar_Click(object sender, EventArgs e)
         {
@@ -58,7 +58,7 @@ namespace LeBi
                 txSenha.Clear();
              
                 conn.Close();
-                MessageBox.Show("Usuário cadastrado com sucesso");
+                MessageBox.Show("Usuário cadastrado com sucesso!");
                 Hide();
                 
 
@@ -68,7 +68,31 @@ namespace LeBi
                 MessageBox.Show(err.Message);
             }
 
-        }    
+        }
 
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label8_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txEndereco_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

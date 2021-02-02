@@ -1,7 +1,7 @@
-insert into pacientes (nome, email, cpf, telefone, endereco, dataNascimento) values
-('Ana Luiza Pacheco', 'ana.luiza@hotmail.com','111.111.111-11','(19)1111-1111', 'Rua Florinda Maria, 52, Campinas-SP', STR_TO_DATE( "12/01/1995", "%d/%m/%Y" )),
-('Paulo Messias Tiburcio', 'paulo.tiburcio@gmail.com', '222.222.222-22', '(19)22222-2222', 'Rua peregrino silta, 33, Campinas-SP', STR_TO_DATE( "10/07/1998", "%d/%m/%Y" )),
-('Maria Elena Durães', 'elena.durae@outlook.com', '333.333.333-33', '(19)3333-3333', 'Av. Benjamin Constant, 255, Campinas-SP', STR_TO_DATE( "21/10/1992", "%d/%m/%Y" ));
+insert into pacientes (nome, email, cpf, telefone, endereco, dataNascimento, senha) values
+('Ana Luiza Pacheco', 'ana.luiza@hotmail.com','111.111.111-11','(19)1111-1111', 'Rua Florinda Maria, 52, Campinas-SP', STR_TO_DATE( "12/01/1995", "%d/%m/%Y" ), '123'),
+('Paulo Messias Tiburcio', 'paulo.tiburcio@gmail.com', '222.222.222-22', '(19)22222-2222', 'Rua peregrino silta, 33, Campinas-SP', STR_TO_DATE( "10/07/1998", "%d/%m/%Y" ),'123'),
+('Maria Elena Durães', 'elena.durae@outlook.com', '333.333.333-33', '(19)3333-3333', 'Av. Benjamin Constant, 255, Campinas-SP', STR_TO_DATE( "21/10/1992", "%d/%m/%Y" ),'123');
 
 insert into medicos (nome, especialidade, crm) values
 ('Adelmo Almeida de Oliveira', 'cardiologia','15227'),

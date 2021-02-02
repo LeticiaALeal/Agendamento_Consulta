@@ -18,7 +18,13 @@ namespace LeBi
             InitializeComponent();
         }
 
+        //string strconn = "server=localhost;port=3306; UID=root; pwd=1234; database=lebi;";
         string strconn = "server=localhost;port=3306; UID=root; pwd=Leh2019; database=lebi;";
+
+        private void FiltroEspecialidade_Load(object sender, EventArgs e)
+        {
+          txLogado.Text = PessoaLogada.email;
+        }
 
         private void btConsultas_Click(object sender, EventArgs e)
         {
@@ -26,14 +32,14 @@ namespace LeBi
             MySqlConnection conn = new MySqlConnection(strconn);
             conn.Open();
 
-            MySqlCommand cmd = new MySqlCommand("select * from consulta_paciente where cpfPaciente = '" + txCPF.Text + "'", conn);
+            MySqlCommand cmd = new MySqlCommand("select * from consulta_paciente where email = '" + txLogado.Text + "'", conn);
             MySqlDataReader reader = cmd.ExecuteReader();
 
-            ConsultaPaciente consultas = new ConsultaPaciente(txCPF.Text);
+            ConsultaPaciente consultas = new ConsultaPaciente(txLogado.Text);
 
             while (reader.Read())
             {
-                if (txCPF.Text == reader.GetString("cpfPaciente"))
+                if (txLogado.Text == reader.GetString("email"))
                 {                    
                     consultas.Show();
                     Hide();
@@ -81,6 +87,21 @@ namespace LeBi
             frmLogin login = new frmLogin();
             login.Show();
             Hide();
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btLogout_Click_1(object sender, EventArgs e)
+        {
+
         }
     }
 }

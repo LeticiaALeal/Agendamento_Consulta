@@ -24,6 +24,7 @@ namespace LeBi
             InitializeComponent();
         }
 
+       //string strconn = "server=localhost;port=3306; UID=root; pwd=1234; database=lebi;";
         string strconn = "server=localhost;port=3306; UID=root; pwd=Leh2019; database=lebi;";
 
         private void ConsultaPaciente_Load(object sender, EventArgs e)
@@ -31,7 +32,7 @@ namespace LeBi
             MySqlConnection conn = new MySqlConnection(strconn);
             try
             {
-                string cmd = "select id as 'Código', medico as 'Médico', horario as 'Horário', dia as 'Dia' from consulta_paciente where cpfPaciente = '" + paciente + "'";
+                string cmd = "select id as 'Código', medico as 'Médico', horario as 'Horário', dia as 'Dia' from consulta_paciente where email = '" + paciente + "'";
                 daConsulta = new MySqlDataAdapter(cmd, conn);
                 MySqlCommandBuilder cb = new MySqlCommandBuilder(daConsulta);
 
@@ -75,6 +76,11 @@ namespace LeBi
             {
                 MessageBox.Show(err.Message);
             }
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

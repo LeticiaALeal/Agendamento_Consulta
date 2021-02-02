@@ -41,9 +41,14 @@ CREATE TABLE Agenda_Medico (
 
 CREATE TABLE consulta_paciente (
 	id INT AUTO_INCREMENT PRIMARY KEY,
-	cpfPaciente varchar(14),
+	-- cpfPaciente varchar(14),
+    email VARCHAR(100),
 	medico varchar (100),
 	horario time,
 	dia varchar (20)
 );
+
+DROP TABLE consulta_paciente;
+
+select * from consulta_paciente;
 

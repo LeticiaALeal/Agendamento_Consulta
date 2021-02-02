@@ -24,11 +24,13 @@ namespace LeBi
             InitializeComponent();         
         }
 
+        //string strconn = "server=localhost;port=3306; UID=root; pwd=1234; database=lebi;";
         string strconn = "server=localhost;port=3306; UID=root; pwd=Leh2019; database=lebi;";
 
         private void EscolhaMedico_Load(object sender, EventArgs e)
         {          
             MySqlConnection conn = new MySqlConnection(strconn);
+            txLogado.Text = PessoaLogada.email; // já é carregado.
 
             try
             {
@@ -63,16 +65,16 @@ namespace LeBi
                 MySqlConnection conn = new MySqlConnection(strconn);
                 conn.Open();
 
-                MySqlCommand cmd = new MySqlCommand("insert into consulta_paciente (cpfPaciente, medico, horario, dia) values (@cpfPaciente, @medico, @horario, @dia)", conn);
+                MySqlCommand cmd = new MySqlCommand("insert into consulta_paciente (email, medico, horario, dia) values (@email, @medico, @horario, @dia)", conn);
 
                 cmd.Parameters.Add("@medico", MySqlDbType.String).Value = txMedico.Text;
                 cmd.Parameters.Add("@horario", MySqlDbType.String).Value = txHorario.Text;
                 cmd.Parameters.Add("@dia", MySqlDbType.String).Value = txDia.Text;
-                cmd.Parameters.Add("@cpfPaciente", MySqlDbType.String).Value = txCpf.Text;
+                cmd.Parameters.Add("@email", MySqlDbType.String).Value = txLogado.Text;
 
                 cmd.ExecuteNonQuery();
 
-                string paciente = txCpf.Text;
+                string paciente = txLogado.Text;
                 ConsultaPaciente consultas = new ConsultaPaciente(paciente);
                 consultas.Show();
                 Hide();
@@ -92,6 +94,11 @@ namespace LeBi
             FiltroEspecialidade filtro = new FiltroEspecialidade();
             filtro.Show();
             Hide();
+        }
+
+        private void txLogado_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

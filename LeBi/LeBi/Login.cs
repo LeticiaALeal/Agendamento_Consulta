@@ -16,7 +16,7 @@ namespace LeBi
         public frmLogin()
         {
             InitializeComponent();
-        }    
+        }
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -30,9 +30,12 @@ namespace LeBi
         }
 
 
+       // public static string usuarioConectado;
+
+
         //string de conexão:
-        /* Conexão Bianca
-         string strconn = "server=localhost;port=3306; UID=root; pwd=1234; database=lebi;";*/
+
+        //string strconn = "server=localhost;port=3306; UID=root; pwd=1234; database=lebi;";
         string strconn = "server=localhost;port=3306; UID=root; pwd=Leh2019; database=lebi;";
 
         private void btLogin_Click(object sender, EventArgs e)
@@ -42,7 +45,7 @@ namespace LeBi
                 MySqlConnection conn = new MySqlConnection(strconn);
                 conn.Open();
 
-                MySqlCommand cmd = new MySqlCommand("select * from Pacientes where email = '" + txEmail.Text + "'", conn);
+                MySqlCommand cmd = new MySqlCommand("select * from Pacientes where email = '" + txEmail.Text + "'", conn); 
                 MySqlDataReader reader = cmd.ExecuteReader(); // vai armazenar na variável reader tudo o que o comando pegar no txEmail.
 
                 while (reader.Read())
@@ -51,8 +54,9 @@ namespace LeBi
                     {
                         if (txSenha.Text == reader.GetString("senha"))
                         {
+                            PessoaLogada.email = txEmail.Text;
                             FiltroEspecialidade home = new FiltroEspecialidade();
-                            home.Show();
+                            home.Show();                            
                             Hide();
                         }
                         else
@@ -70,6 +74,31 @@ namespace LeBi
             {
                 MessageBox.Show(err.Message);
             }
+
+        }
+
+        private void txEmail_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txSenha_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void frmLogin_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
 
         }
     }
