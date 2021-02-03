@@ -57,10 +57,9 @@ namespace LeBi
             this.brAgendar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.brAgendar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.brAgendar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.brAgendar.Location = new System.Drawing.Point(1132, 729);
-            this.brAgendar.Margin = new System.Windows.Forms.Padding(4);
+            this.brAgendar.Location = new System.Drawing.Point(849, 592);
             this.brAgendar.Name = "brAgendar";
-            this.brAgendar.Size = new System.Drawing.Size(154, 49);
+            this.brAgendar.Size = new System.Drawing.Size(116, 40);
             this.brAgendar.TabIndex = 3;
             this.brAgendar.Text = "Agendar";
             this.brAgendar.UseVisualStyleBackColor = false;
@@ -70,11 +69,10 @@ namespace LeBi
             // 
             this.dataGridView1.BackgroundColor = System.Drawing.Color.WhiteSmoke;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(760, 132);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
+            this.dataGridView1.Location = new System.Drawing.Point(570, 107);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(572, 413);
+            this.dataGridView1.Size = new System.Drawing.Size(429, 336);
             this.dataGridView1.TabIndex = 9;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
@@ -82,56 +80,50 @@ namespace LeBi
             // 
             this.txMedico.BackColor = System.Drawing.Color.WhiteSmoke;
             this.txMedico.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txMedico.Location = new System.Drawing.Point(588, 639);
-            this.txMedico.Margin = new System.Windows.Forms.Padding(4);
+            this.txMedico.Location = new System.Drawing.Point(441, 519);
             this.txMedico.Name = "txMedico";
             this.txMedico.ReadOnly = true;
-            this.txMedico.Size = new System.Drawing.Size(311, 30);
+            this.txMedico.Size = new System.Drawing.Size(234, 26);
             this.txMedico.TabIndex = 10;
             // 
             // txHorario
             // 
             this.txHorario.BackColor = System.Drawing.Color.WhiteSmoke;
             this.txHorario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txHorario.Location = new System.Drawing.Point(962, 639);
-            this.txHorario.Margin = new System.Windows.Forms.Padding(4);
+            this.txHorario.Location = new System.Drawing.Point(722, 519);
             this.txHorario.Name = "txHorario";
             this.txHorario.ReadOnly = true;
-            this.txHorario.Size = new System.Drawing.Size(197, 30);
+            this.txHorario.Size = new System.Drawing.Size(149, 26);
             this.txHorario.TabIndex = 11;
             // 
             // txDia
             // 
             this.txDia.BackColor = System.Drawing.Color.WhiteSmoke;
             this.txDia.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txDia.Location = new System.Drawing.Point(1250, 639);
-            this.txDia.Margin = new System.Windows.Forms.Padding(4);
+            this.txDia.Location = new System.Drawing.Point(938, 519);
             this.txDia.Name = "txDia";
             this.txDia.ReadOnly = true;
-            this.txDia.Size = new System.Drawing.Size(197, 30);
+            this.txDia.Size = new System.Drawing.Size(149, 26);
             this.txDia.TabIndex = 12;
             // 
             // txLogado
             // 
             this.txLogado.BackColor = System.Drawing.Color.WhiteSmoke;
             this.txLogado.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txLogado.Location = new System.Drawing.Point(106, 700);
-            this.txLogado.Margin = new System.Windows.Forms.Padding(4);
+            this.txLogado.Location = new System.Drawing.Point(80, 569);
             this.txLogado.Name = "txLogado";
             this.txLogado.ReadOnly = true;
-            this.txLogado.Size = new System.Drawing.Size(305, 30);
+            this.txLogado.Size = new System.Drawing.Size(230, 26);
             this.txLogado.TabIndex = 13;
-            this.txLogado.TextChanged += new System.EventHandler(this.txLogado_TextChanged);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Crimson;
-            this.label1.Location = new System.Drawing.Point(583, 610);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(437, 496);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(82, 25);
+            this.label1.Size = new System.Drawing.Size(64, 20);
             this.label1.TabIndex = 14;
             this.label1.Text = "Médico:";
             // 
@@ -140,10 +132,9 @@ namespace LeBi
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Crimson;
-            this.label2.Location = new System.Drawing.Point(957, 610);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(718, 496);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(81, 25);
+            this.label2.Size = new System.Drawing.Size(65, 20);
             this.label2.TabIndex = 15;
             this.label2.Text = "Horário:";
             // 
@@ -152,10 +143,9 @@ namespace LeBi
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Crimson;
-            this.label3.Location = new System.Drawing.Point(1245, 610);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Location = new System.Drawing.Point(934, 496);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(47, 25);
+            this.label3.Size = new System.Drawing.Size(37, 20);
             this.label3.TabIndex = 16;
             this.label3.Text = "Dia:";
             // 
@@ -173,10 +163,9 @@ namespace LeBi
             this.btVoltar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.btVoltar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btVoltar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btVoltar.Location = new System.Drawing.Point(872, 729);
-            this.btVoltar.Margin = new System.Windows.Forms.Padding(4);
+            this.btVoltar.Location = new System.Drawing.Point(654, 592);
             this.btVoltar.Name = "btVoltar";
-            this.btVoltar.Size = new System.Drawing.Size(154, 49);
+            this.btVoltar.Size = new System.Drawing.Size(116, 40);
             this.btVoltar.TabIndex = 18;
             this.btVoltar.Text = "Voltar";
             this.btVoltar.UseVisualStyleBackColor = false;
@@ -186,9 +175,10 @@ namespace LeBi
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
             this.pictureBox1.Image = global::LeBi.Properties.Resources._1e8c01182d73aa41192422c6f7770a59_calend_aacute_rio_m_eacute_dico_by_vexels1;
-            this.pictureBox1.Location = new System.Drawing.Point(3, 2);
+            this.pictureBox1.Location = new System.Drawing.Point(2, 2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(1522, 804);
+            this.pictureBox1.Size = new System.Drawing.Size(1142, 653);
             this.pictureBox1.TabIndex = 19;
             this.pictureBox1.TabStop = false;
             // 
@@ -198,10 +188,9 @@ namespace LeBi
             this.label4.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label4.Font = new System.Drawing.Font("Georgia", 28.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.Crimson;
-            this.label4.Location = new System.Drawing.Point(660, 41);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Location = new System.Drawing.Point(495, 33);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(681, 56);
+            this.label4.Size = new System.Drawing.Size(531, 43);
             this.label4.TabIndex = 20;
             this.label4.Text = "Médicos e horários disponíveis";
             // 
@@ -210,10 +199,9 @@ namespace LeBi
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.Crimson;
-            this.label5.Location = new System.Drawing.Point(819, 98);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Location = new System.Drawing.Point(614, 80);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(383, 20);
+            this.label5.Size = new System.Drawing.Size(329, 17);
             this.label5.TabIndex = 21;
             this.label5.Text = "Para agendar, clique na opção que mais te agrada";
             // 
@@ -222,19 +210,18 @@ namespace LeBi
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.Crimson;
-            this.label6.Location = new System.Drawing.Point(163, 667);
-            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label6.Location = new System.Drawing.Point(122, 542);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(194, 29);
+            this.label6.Size = new System.Drawing.Size(150, 24);
             this.label6.TabIndex = 22;
             this.label6.Text = "Seu identificador";
             // 
             // EscolhaMedico
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.ClientSize = new System.Drawing.Size(1525, 807);
+            this.ClientSize = new System.Drawing.Size(1144, 656);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
@@ -250,7 +237,6 @@ namespace LeBi
             this.Controls.Add(this.brAgendar);
             this.Controls.Add(this.pictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "EscolhaMedico";
             this.Text = "Escolha Médico";
             this.Load += new System.EventHandler(this.EscolhaMedico_Load);

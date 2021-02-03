@@ -29,12 +29,6 @@ namespace LeBi
             cadastro.ShowDialog();
         }
 
-
-       // public static string usuarioConectado;
-
-
-        //string de conexão:
-
         //string strconn = "server=localhost;port=3306; UID=root; pwd=1234; database=lebi;";
         string strconn = "server=localhost;port=3306; UID=root; pwd=Leh2019; database=lebi;";
 
@@ -77,29 +71,5 @@ namespace LeBi
 
         }
 
-        private void txEmail_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txSenha_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void frmLogin_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }

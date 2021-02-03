@@ -37,18 +37,19 @@ namespace LeBi
 
             ConsultaPaciente consultas = new ConsultaPaciente(txLogado.Text);
 
-            while (reader.Read())
-            {
-                if (txLogado.Text == reader.GetString("email"))
-                {                    
-                    consultas.Show();
-                    Hide();
-                }
-                else
+
+                while (reader.Read())
                 {
-                    MessageBox.Show("Você não tem consultas agendadas");
-                }
-            }
+                    if (txLogado.Text == reader.GetString("email"))
+                    {
+                        consultas.Show();
+                        Hide();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Você não tem consultas agendadas");
+                    }
+                }                         
 
             conn.Close();
         }
@@ -87,21 +88,6 @@ namespace LeBi
             frmLogin login = new frmLogin();
             login.Show();
             Hide();
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btLogout_Click_1(object sender, EventArgs e)
-        {
-
         }
     }
 }

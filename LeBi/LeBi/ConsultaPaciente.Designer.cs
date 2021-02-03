@@ -42,14 +42,12 @@ namespace LeBi
             // 
             this.dataGridView1.BackgroundColor = System.Drawing.Color.WhiteSmoke;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(705, 133);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
+            this.dataGridView1.Location = new System.Drawing.Point(529, 108);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(695, 397);
+            this.dataGridView1.Size = new System.Drawing.Size(521, 323);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // label1
             // 
@@ -57,10 +55,9 @@ namespace LeBi
             this.label1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label1.Font = new System.Drawing.Font("Georgia", 28.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Crimson;
-            this.label1.Location = new System.Drawing.Point(753, 25);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(565, 20);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(573, 56);
+            this.label1.Size = new System.Drawing.Size(447, 43);
             this.label1.TabIndex = 1;
             this.label1.Text = "Suas consultas agendadas";
             // 
@@ -72,10 +69,9 @@ namespace LeBi
             this.btVoltar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.btVoltar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btVoltar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btVoltar.Location = new System.Drawing.Point(996, 560);
-            this.btVoltar.Margin = new System.Windows.Forms.Padding(4);
+            this.btVoltar.Location = new System.Drawing.Point(747, 455);
             this.btVoltar.Name = "btVoltar";
-            this.btVoltar.Size = new System.Drawing.Size(130, 46);
+            this.btVoltar.Size = new System.Drawing.Size(98, 37);
             this.btVoltar.TabIndex = 19;
             this.btVoltar.Text = "Voltar";
             this.btVoltar.UseVisualStyleBackColor = false;
@@ -86,10 +82,9 @@ namespace LeBi
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Crimson;
-            this.label2.Location = new System.Drawing.Point(869, 83);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(652, 67);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(386, 20);
+            this.label2.Size = new System.Drawing.Size(326, 17);
             this.label2.TabIndex = 20;
             this.label2.Text = "Para desmarcar uma consulta, clique na escolhida";
             // 
@@ -97,25 +92,25 @@ namespace LeBi
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
             this.pictureBox1.Image = global::LeBi.Properties.Resources._99e164014aff86b7b848821b532ddb02_pasta_de_hist_oacute_rico_de_registro_de_arquivos_m_eacute_dicos_by_vexels;
-            this.pictureBox1.Location = new System.Drawing.Point(12, 3);
+            this.pictureBox1.Location = new System.Drawing.Point(9, 2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(1415, 653);
+            this.pictureBox1.Size = new System.Drawing.Size(1061, 531);
             this.pictureBox1.TabIndex = 21;
             this.pictureBox1.TabStop = false;
             // 
             // ConsultaPaciente
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.ClientSize = new System.Drawing.Size(1430, 657);
+            this.ClientSize = new System.Drawing.Size(1072, 534);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.btVoltar);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.pictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "ConsultaPaciente";
             this.Text = "Consulta Paciente";
             this.Load += new System.EventHandler(this.ConsultaPaciente_Load);

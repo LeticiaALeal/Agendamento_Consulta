@@ -23,18 +23,17 @@ namespace LeBi
             this.especialidade = especialidade;
             InitializeComponent();         
         }
-
         //string strconn = "server=localhost;port=3306; UID=root; pwd=1234; database=lebi;";
         string strconn = "server=localhost;port=3306; UID=root; pwd=Leh2019; database=lebi;";
 
         private void EscolhaMedico_Load(object sender, EventArgs e)
         {          
             MySqlConnection conn = new MySqlConnection(strconn);
-            txLogado.Text = PessoaLogada.email; // já é carregado.
+            txLogado.Text = PessoaLogada.email;
 
             try
             {
-                string cmd = "select m.nome as 'Médico', a.horario as 'Horário', a.dia as 'Dia' from medicos m, agenda a, agenda_medico c where c.idMedico = m.id and c.idAgenda = a.id and m.especialidade = '" + especialidade + "'";
+                string cmd = "select c.id, m.especialidade, m.nome as 'Médico', a.horario as 'Horário', a.dia as 'Dia' from medicos m, agenda a, agenda_medico c where c.idMedico = m.id and c.idAgenda = a.id and m.especialidade = '" + especialidade + "'";
                 daAgenda = new MySqlDataAdapter(cmd, conn);
                 MySqlCommandBuilder cb = new MySqlCommandBuilder(daAgenda);
 
@@ -42,6 +41,9 @@ namespace LeBi
                 daAgenda.Fill(dsAgenda, "Agenda");
                 dataGridView1.DataSource = dsAgenda;
                 dataGridView1.DataMember = "Agenda";
+
+                dataGridView1.Columns["id"].Visible = false;
+                dataGridView1.Columns["especialidade"].Visible = false;
             }
             catch (Exception error)
             {
@@ -50,11 +52,16 @@ namespace LeBi
 
         }
 
+        public string idAgenda;
+        public string espec;
+
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            txMedico.Text = dataGridView1.CurrentRow.Cells[0].Value.ToString();
-            txHorario.Text = dataGridView1.CurrentRow.Cells[1].Value.ToString();
-            txDia.Text = dataGridView1.CurrentRow.Cells[2].Value.ToString();
+            idAgenda = dataGridView1.CurrentRow.Cells[0].Value.ToString();
+            espec = dataGridView1.CurrentRow.Cells[1].Value.ToString();
+            txMedico.Text = dataGridView1.CurrentRow.Cells[2].Value.ToString();
+            txHorario.Text = dataGridView1.CurrentRow.Cells[3].Value.ToString();
+            txDia.Text = dataGridView1.CurrentRow.Cells[4].Value.ToString();
                      
         }
 
@@ -65,12 +72,17 @@ namespace LeBi
                 MySqlConnection conn = new MySqlConnection(strconn);
                 conn.Open();
 
-                MySqlCommand cmd = new MySqlCommand("insert into consulta_paciente (email, medico, horario, dia) values (@email, @medico, @horario, @dia)", conn);
+                MySqlCommand cmd = new MySqlCommand("insert into consulta_paciente (email, medico, especialidade, horario, dia) values (@email, @medico, @especialidade, @horario, @dia)", conn);
+                MySqlCommand cmdDel = new MySqlCommand("delete from agenda_medico where id ='" + idAgenda + "'", conn);
 
                 cmd.Parameters.Add("@medico", MySqlDbType.String).Value = txMedico.Text;
+                cmd.Parameters.Add("@especialidade", MySqlDbType.String).Value = espec;
                 cmd.Parameters.Add("@horario", MySqlDbType.String).Value = txHorario.Text;
                 cmd.Parameters.Add("@dia", MySqlDbType.String).Value = txDia.Text;
                 cmd.Parameters.Add("@email", MySqlDbType.String).Value = txLogado.Text;
+
+                cmdDel.Parameters.AddWithValue("id", idAgenda);
+                cmdDel.ExecuteNonQuery();
 
                 cmd.ExecuteNonQuery();
 
@@ -94,11 +106,6 @@ namespace LeBi
             FiltroEspecialidade filtro = new FiltroEspecialidade();
             filtro.Show();
             Hide();
-        }
-
-        private void txLogado_TextChanged(object sender, EventArgs e)
-        {
-
         }
     }
 }

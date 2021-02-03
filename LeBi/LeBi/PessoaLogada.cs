@@ -8,6 +8,6 @@ namespace LeBi
 {
     static class PessoaLogada
     {
-       public static string email; // pessoalogada.email = 
+       public static string email; // Armazena o e-mail do paciente logado
     }
 }
